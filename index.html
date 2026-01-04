@@ -54,7 +54,10 @@
   color: #555;           /* 深灰色，比纯黑柔和 */
   line-height: 1.4;      /* 行距稍大，看起来轻盈 */
 }
-
+    .lab-subtitle .first-letter {
+  font-weight: bold;
+  text-decoration: underline;
+}
     /* ---------- Navigation ---------- */
     nav {
       border-bottom: 1px solid var(--border);
@@ -153,11 +156,17 @@
     <img src="./images/seed-logo.png" alt="SEED Lab Logo" class="lab-logo">
     <div>
   <h1>SEED Lab</h1>
-  <p>
-  Soil Ecology and Environmental Dynamics Lab<br>
-  at the University of Hong Kong
-  </p>
-
+  <p class="lab-subtitle">
+        <span class="first-letter">S</span>oil 
+        <span class="first-letter">E</span>cology 
+        and 
+        <span class="first-letter">E</span>nvironmental 
+        <span class="first-letter">D</span>ynamics
+      </p>
+      <p>at the University of Hong Kong</p>
+    </div>
+  </div>
+</header>
 
     </div>
   </div>
