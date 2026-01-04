@@ -48,16 +48,19 @@
       color: var(--accent);
       letter-spacing: 0.3px;
     }
+
     header p {
-  margin-top: 6px;       /* 上下间距 */
-  font-size: 1.2rem;       /* 字稍微小一点，更好看 */
-  color: #555;           /* 深灰色，比纯黑柔和 */
-  line-height: 1.4;      /* 行距稍大，看起来轻盈 */
-}
+      margin-top: 6px;
+      font-size: 1.2rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
     .lab-subtitle .first-letter {
-  font-weight: bold;
-  text-decoration: underline;
-}
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
     /* ---------- Navigation ---------- */
     nav {
       border-bottom: 1px solid var(--border);
@@ -92,14 +95,15 @@
       max-width: 1100px;
       margin: auto;
     }
-    section {
-  padding: 24px 0;
-  border-bottom: 1px solid #e5e7eb; /* 淡灰色横线分隔 */
-}
 
-section:last-child {
-  border-bottom: none; /* 最后一个 section 不要边框 */
-}
+    section {
+      padding: 24px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
 
     h2 {
       margin-top: 0;
@@ -112,65 +116,47 @@ section:last-child {
       font-size: 1.05rem;
     }
 
-    /* ---------- PI ---------- */
-    /* PI section 样式 */
-  /* ---------- PI ---------- */
-.pi-card {
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;  /* 照片和信息顶部对齐 */
-  flex-wrap: wrap;
-}
+    /* ---------- PI Section ---------- */
+    .pi-card {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
 
-.pi-photo {
-  width: 170px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 1px solid var(--border);
-}
+    .pi-photo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-/* PI 信息文字 */
-.pi-info p {
-  margin: 0 0 8px 0;
-  font-size: 1.05rem;
-  color: var(--text);
-}
+    .pi-photo {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
 
-/* 链接文字 */
-.pi-info a {
-  color: var(--accent);
-  text-decoration: none;
-  margin-right: 12px;
-  font-size: 0.95rem;
-}
+    .pi-links {
+      display: grid;
+      grid-template-columns: repeat(3, 48px);
+      gap: 8px;
+      margin-top: 12px;
+    }
 
-.pi-info a:hover {
-  text-decoration: underline;
-}
+    .pi-links a {
+      display: block;
+      width: 48px;
+      height: 48px;
+    }
 
-/* 小图标排布，固定大小，保证整齐 */
-.pi-links {
-  display: grid;
-  grid-template-columns: repeat(3, 50px); /* 两行三列，每列宽50px */
-  gap: 12px;                             /* 图标间距 */
-  margin-top: 12px;
-}
-
-.pi-links a {
-  display: block;
-  width: 50px;
-  height: 50px;
-}
-
-.pi-links a img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;  /* 保持原比例，不拉伸 */
-  display: block;
-}
-
-
+    .pi-links a img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
 
     /* ---------- Footer ---------- */
     footer {
@@ -188,8 +174,8 @@ section:last-child {
   <div class="logo-title">
     <img src="./images/seed-logo.png" alt="SEED Lab Logo" class="lab-logo">
     <div>
-  <h1>SEED Lab</h1>
-  <p class="lab-subtitle">
+      <h1>SEED Lab</h1>
+      <p class="lab-subtitle">
         <span class="first-letter">S</span>oil 
         <span class="first-letter">E</span>cology 
         and 
@@ -197,10 +183,6 @@ section:last-child {
         <span class="first-letter">D</span>ynamics
       </p>
       <p>at the University of Hong Kong</p>
-    </div>
-  </div>
-</header>
-
     </div>
   </div>
 </header>
@@ -220,20 +202,20 @@ section:last-child {
   <div class="container">
     <h2>About SEED Lab</h2>
     <p class="lead">
-  The 
-  <span class="lab-subtitle">
-    <span class="first-letter">S</span>oil 
-    <span class="first-letter">E</span>cology 
-    and 
-    <span class="first-letter">E</span>nvironmental 
-    <span class="first-letter">D</span>ynamics
-  </span> 
-  (SEED) Lab investigates how soil biogeochemical processes
-  respond to global environmental change. Our research integrates field experiments, laboratory analyses,
-  and quantitative approaches to understand soil carbon cycling, ecosystem functioning, 
-  and climate–soil feedbacks across terrestrial ecosystems. Our goal is to identify nature-based solutions
-  to carbon sequestration, climate mitigation, and food security.
-</p>
+      The 
+      <span class="lab-subtitle">
+        <span class="first-letter">S</span>oil 
+        <span class="first-letter">E</span>cology 
+        and 
+        <span class="first-letter">E</span>nvironmental 
+        <span class="first-letter">D</span>ynamics
+      </span> 
+      (SEED) Lab investigates how soil biogeochemical processes
+      respond to global environmental change. Our research integrates field experiments, laboratory analyses,
+      and quantitative approaches to understand soil carbon cycling, ecosystem functioning, 
+      and climate–soil feedbacks across terrestrial ecosystems. Our goal is to identify nature-based solutions
+      to carbon sequestration, climate mitigation, and food security.
+    </p>
   </div>
 </section>
 
@@ -241,24 +223,23 @@ section:last-child {
   <div class="container">
     <h2>Principal Investigator</h2>
     <div class="pi-card">
-      <img src="./images/guopeng-liang.jpg" alt="Guopeng Liang" class="pi-photo">
+      <div class="pi-photo-container">
+        <img src="./images/guopeng-liang.jpg" alt="Guopeng Liang" class="pi-photo">
+        <div class="pi-links">
+          <a href="#" title="Google Scholar"><img src="./icons/google-scholar.png" alt="Google Scholar"></a>
+          <a href="#" title="Twitter"><img src="./icons/twitter.png" alt="Twitter"></a>
+          <a href="#" title="CV"><img src="./icons/cv.png" alt="CV"></a>
+          <a href="#" title="Email"><img src="./icons/email.png" alt="Email"></a>
+          <a href="#" title="LinkedIn"><img src="./icons/linkedin.png" alt="LinkedIn"></a>
+          <a href="#" title="ResearchGate"><img src="./icons/researchgate.png" alt="ResearchGate"></a>
+        </div>
+      </div>
       <div class="pi-info">
         <p class="lead">
           <strong>Guopeng Liang</strong><br>
           Assistant Professor<br>
           School of Biological Sciences, The University of Hong Kong
         </p>
-
-        <!-- 新增：图标容器 -->
-        <div class="pi-icons">
-          <a href="#"><img src="./icons/google-scholar.png" alt="Google Scholar"></a>
-          <a href="#"><img src="./icons/twitter.png" alt="Twitter"></a>
-          <a href="#"><img src="./icons/linkedin.png" alt="LinkedIn"></a>
-          <a href="#"><img src="./icons/researchgate.png" alt="ResearchGate"></a>
-          <a href="#"><img src="./icons/email.png" alt="Email"></a>
-          <a href="#"><img src="./icons/cv.png" alt="CV"></a>
-        </div>
-
       </div>
     </div>
   </div>
