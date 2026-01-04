@@ -113,31 +113,46 @@ section:last-child {
     }
 
     /* ---------- PI ---------- */
-    .pi-card {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+    /* PI section 样式 */
+.pi-card {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    .pi-photo {
-      width: 170px;
-      height: 170px;
-      object-fit: cover;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-    }
+.pi-photo {
+  width: 170px;        /* 调整头像大小 */
+  height: 170px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
 
-    .pi-info a {
-      color: var(--accent);
-      text-decoration: none;
-      margin-right: 18px;
-      font-size: 0.95rem;
-    }
+.pi-info a {
+  text-decoration: none;
+  margin-right: 12px;
+}
 
-    .pi-info a:hover {
-      text-decoration: underline;
-    }
+.pi-info a:hover {
+  opacity: 0.7;
+}
+
+/* 小图标样式 */
+.pi-links {
+  margin-top: 8px;
+}
+
+.pi-links a {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.pi-links .icon {
+  width: 24px;      /* 图标大小 */
+  height: 24px;
+  vertical-align: middle;
+}
 
     /* ---------- Footer ---------- */
     footer {
@@ -222,10 +237,10 @@ section:last-child {
         <!-- 图标链接 -->
         <p class="pi-links">
           <a href="https://scholar.google.com/..." target="_blank">
-            <img src="./icons/google-scholar.png" alt="Google Scholar" class="icon">
+            <img src="./icons/google-scholar.jpg" alt="Google Scholar" class="icon">
           </a>
           <a href="https://twitter.com/..." target="_blank">
-            <img src="./icons/twitter.png" alt="Twitter" class="icon">
+            <img src="./icons/twitter.jpg" alt="Twitter" class="icon">
           </a>
           <a href="https://www.linkedin.com/..." target="_blank">
             <img src="./icons/linkedin.png" alt="LinkedIn" class="icon">
@@ -234,7 +249,7 @@ section:last-child {
             <img src="./icons/researchgate.png" alt="ResearchGate" class="icon">
           </a>
           <a href="mailto:your.email@hku.hk">
-            <img src="./icons/email.png" alt="Email" class="icon">
+            <img src="./icons/email.jpg" alt="Email" class="icon">
           </a>
           <a href="./CV.pdf" target="_blank">
             <img src="./icons/cv.png" alt="CV" class="icon">
