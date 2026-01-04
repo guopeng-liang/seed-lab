@@ -114,45 +114,55 @@ section:last-child {
 
     /* ---------- PI ---------- */
     /* PI section 样式 */
+  /* ---------- PI ---------- */
 .pi-card {
   display: flex;
   gap: 32px;
-  align-items: center;
+  align-items: flex-start;  /* 照片和信息顶部对齐 */
   flex-wrap: wrap;
 }
 
 .pi-photo {
-  width: 170px;        /* 调整头像大小 */
+  width: 170px;
   height: 170px;
   object-fit: cover;
   border-radius: 6px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
 }
 
+/* PI 信息文字 */
+.pi-info p {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+/* 链接文字 */
 .pi-info a {
+  color: var(--accent);
   text-decoration: none;
   margin-right: 12px;
+  font-size: 0.95rem;
 }
 
 .pi-info a:hover {
-  opacity: 0.7;
+  text-decoration: underline;
 }
 
-/* 小图标样式 */
+/* 小图标，排成两行三列 */
 .pi-links {
-  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  gap: 10px;
+  margin-top: 12px;
 }
 
-.pi-links a {
-  display: inline-block;
-  margin-right: 8px;
+.pi-links a img {
+  width: 40px;
+  height: 40px;
+  display: block;
 }
 
-.pi-links .icon {
-  width: 24px;      /* 图标大小 */
-  height: 24px;
-  vertical-align: middle;
-}
 
     /* ---------- Footer ---------- */
     footer {
@@ -223,10 +233,7 @@ section:last-child {
   <div class="container">
     <h2>Principal Investigator</h2>
     <div class="pi-card">
-      <!-- 你的头像 -->
       <img src="./images/guopeng-liang.jpg" alt="Guopeng Liang" class="pi-photo">
-
-      <!-- 个人信息 + 图标链接 -->
       <div class="pi-info">
         <p class="lead">
           <strong>Guopeng Liang</strong><br>
@@ -234,32 +241,20 @@ section:last-child {
           School of Biological Sciences, The University of Hong Kong
         </p>
 
-        <!-- 图标链接 -->
-        <p class="pi-links">
-          <a href="https://scholar.google.com/..." target="_blank">
-            <img src="./icons/google-scholar.png" alt="Google Scholar" class="icon">
-          </a>
-          <a href="https://twitter.com/..." target="_blank">
-            <img src="./icons/twitter.png" alt="Twitter" class="icon">
-          </a>
-          <a href="https://www.linkedin.com/..." target="_blank">
-            <img src="./icons/linkedin.png" alt="LinkedIn" class="icon">
-          </a>
-          <a href="https://www.researchgate.net/..." target="_blank">
-            <img src="./icons/researchgate.png" alt="ResearchGate" class="icon">
-          </a>
-          <a href="mailto:your.email@hku.hk">
-            <img src="./icons/email.png" alt="Email" class="icon">
-          </a>
-          <a href="./CV.pdf" target="_blank">
-            <img src="./icons/cv.png" alt="CV" class="icon">
-          </a>
-        </p>
+        <!-- 新增：图标容器 -->
+        <div class="pi-icons">
+          <a href="#"><img src="./icons/google-scholar.png" alt="Google Scholar"></a>
+          <a href="#"><img src="./icons/twitter.png" alt="Twitter"></a>
+          <a href="#"><img src="./icons/linkedin.png" alt="LinkedIn"></a>
+          <a href="#"><img src="./icons/researchgate.png" alt="ResearchGate"></a>
+          <a href="#"><img src="./icons/email.png" alt="Email"></a>
+          <a href="#"><img src="./icons/cv.png" alt="CV"></a>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-
 
 <section>
   <div class="container">
