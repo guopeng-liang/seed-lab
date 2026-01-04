@@ -92,14 +92,14 @@
       max-width: 1100px;
       margin: auto;
     }
-
     section {
-      padding: 24px 0;
-    }
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e7eb; /* 淡灰色横线分隔 */
+}
 
-    section:nth-child(even) {
-      background-color: var(--bg-light);
-    }
+section:last-child {
+  border-bottom: none; /* 最后一个 section 不要边框 */
+}
 
     h2 {
       margin-top: 0;
