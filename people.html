@@ -105,15 +105,6 @@
       border-bottom: none;
     }
 
-    h2 {
-      margin-top: 0;
-      font-size: 1.6rem;
-      color: var(--accent);
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 8px;
-      margin-bottom: 24px;
-    }
-
     /* ---------- Profile Card (Left Photo, Right Text) ---------- */
     .profile-card {
       display: flex;
@@ -152,6 +143,12 @@
 
     .profile-info a:hover {
       text-decoration: underline;
+    }
+
+    .pub-indent {
+      margin-left: 12px;
+      display: block;
+      margin-top: 4px;
     }
 
     /* ---------- Footer ---------- */
@@ -217,7 +214,6 @@
 
 <section>
   <div class="container">
-    <h2>PhD Students</h2>
 
     <!-- Wei KE Profile Card -->
     <div class="profile-card">
@@ -227,9 +223,8 @@
         <p><strong>Start year:</strong> 2026</p>
         <p><strong>Education:</strong> Bachelor's degree (Tsinghua University); Master's degree (The University of Hong Kong)</p>
         <p>
-          <strong>First-author publication before joining the lab:</strong> 
-          <em>Higher nitrification and lower consumption drive higher N<sub>2</sub>O effluxes in estuarine than non-estuarine mangrove wetlands</em>. 
-          Environmental Research Letters.
+          <strong>First-author publication before joining the lab:</strong>
+          <span class="pub-indent">Higher nitrification and lower consumption drive higher N<sub>2</sub>O effluxes in estuarine than non-estuarine mangrove wetlands. <em>Environmental Research Letters</em>.</span>
         </p>
         <p><strong>Research Interest:</strong> Soil carbon cycling</p>
         <p>
