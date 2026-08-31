@@ -109,35 +109,49 @@
       margin-top: 0;
       font-size: 1.6rem;
       color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 8px;
+      margin-bottom: 24px;
     }
 
-    .lead {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      text-align: justify;
-    }
-
-    /* ---------- Members Grid ---------- */
-    .members-grid {
+    /* ---------- Profile Card (Left Photo, Right Text) ---------- */
+    .profile-card {
       display: flex;
-      flex-wrap: wrap;
       gap: 32px;
-      justify-content: center;
-      margin-top: 24px;
+      align-items: flex-start;
+      margin-top: 16px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background-color: #fff;
     }
 
-    .member-card {
-      width: 200px;
-      text-align: center;
-    }
-
-    .member-photo {
-      width: 170px;
-      height: 170px;
+    .profile-photo {
+      width: 180px;
+      height: 220px;
       object-fit: cover;
       border-radius: 6px;
       border: 1px solid var(--border);
-      margin-bottom: 12px;
+      flex-shrink: 0;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .profile-info p {
+      margin: 0 0 10px 0;
+      line-height: 1.6;
+    }
+
+    .profile-info a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .profile-info a:hover {
+      text-decoration: underline;
     }
 
     /* ---------- Footer ---------- */
@@ -150,21 +164,28 @@
 
     /* ---------- Responsive ---------- */
     @media (max-width: 768px) {
-      .members-grid {
+      .profile-card {
         flex-direction: column;
         align-items: center;
+        text-align: left;
+      }
+      
+      .profile-photo {
+        width: 160px;
+        height: 190px;
       }
     }
   </style>
+  
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R0E1EVT00L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R0E1EVT00L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-R0E1EVT00L');
-</script>
+    gtag('config', 'G-R0E1EVT00L');
+  </script>
 </head>
 
 <body>
@@ -196,22 +217,27 @@
 
 <section>
   <div class="container">
-    <p class="lead">
-      Our lab is expanding. Members’ profiles will appear here soon.
-    </p>
+    <h2>PhD Students</h2>
 
-    <!-- 如果以后有成员，可以用下面的结构：
-    <div class="members-grid">
-      <div class="member-card">
-        <img src="./images/member1.jpg" alt="Member Name" class="member-photo">
-        <p><strong>Member Name</strong><br>Position</p>
-      </div>
-      <div class="member-card">
-        <img src="./images/member2.jpg" alt="Member Name" class="member-photo">
-        <p><strong>Member Name</strong><br>Position</p>
+    <!-- Wei KE Profile Card -->
+    <div class="profile-card">
+      <img src="./images/Wei_Ke.jpg" alt="Wei KE" class="profile-photo">
+      <div class="profile-info">
+        <p><strong>Name:</strong> Wei KE</p>
+        <p><strong>Start year:</strong> 2026</p>
+        <p>
+          <strong>Education:</strong> Bachelor's degree (Tsinghua University); Master's degree (The University of Hong Kong); 
+          first-author publication before joining the lab: 
+          <em>Higher nitrification and lower consumption drive higher N<sub>2</sub>O effluxes in estuarine than non-estuarine mangrove wetlands</em>. 
+          Environmental Research Letters.
+        </p>
+        <p><strong>Research Interest:</strong> Soil carbon cycling</p>
+        <p>
+          <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        </p>
       </div>
     </div>
-    -->
+
   </div>
 </section>
 
@@ -225,4 +251,3 @@
 
 </body>
 </html>
-
